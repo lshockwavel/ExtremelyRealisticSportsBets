@@ -25,32 +25,32 @@ const players = [
 
 
 function drawTeam1() {
-    const team1Container = document.getElementById('teamOne');
-    let team1Content = ''; // Create empty  container first
+  const team1Container = document.getElementById('teamOne');
+  let team1Content = ''; // Create empty  container first
 
-    const team1Players = players.filter(player => player.teamNumber == 1);
-    // team1Players.forEach(player => {
-    //     team1Content += `<div class="player">${player.emoji} ${player.name}</div>`;
-    // });
-    // team1Container.innerHTML = team1Content;
-    team1Players.forEach(player => team1Content += player.emoji);
-    team1Container.innerText = team1Content;
-    //.. loop through players adding only those on team1
-  }
+  const team1Players = players.filter(player => player.teamNumber == 1);
+  // team1Players.forEach(player => {
+  //     team1Content += `<div class="player">${player.emoji} ${player.name}</div>`;
+  // });
+  // team1Container.innerHTML = team1Content;
+  team1Players.forEach(player => team1Content += player.emoji);
+  team1Container.innerText = team1Content;
+  //.. loop through players adding only those on team1
+}
 
-  function draftPlayers() {
-    players.forEach(player => {
-      const randomTeamNumber = Math.ceil(Math.random() * 2)
-      player.teamNumber = randomTeamNumber
-    })
-    drawTeamOne()
-  }
+function draftPlayers() {
+  players.forEach(player => {
+    const randomTeamNumber = Math.ceil(Math.random() * 2)
+    player.teamNumber = randomTeamNumber
+  })
+  drawTeamOne()
+}
 
 
-  function drawTeamOne() {
-    let teamOneEmojis = ''
-    const teamOnePlayers = players.filter(player => player.teamNumber == 1)
-    teamOnePlayers.forEach(player => teamOneEmojis += player.emoji)
-    const teamOneElement = document.getElementById('teamOneRoster')
-    teamOneElement.innerText = teamOneEmojis
-  }
+function drawTeamOne() {
+  let teamOneEmojis = ''
+  const teamOnePlayers = players.filter(player => player.teamNumber == 1)
+  teamOnePlayers.forEach(player => teamOneEmojis += player.emoji)
+  const teamOneElement = document.getElementById('teamOneRoster')
+  teamOneElement.innerText = teamOneEmojis
+}
