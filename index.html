@@ -13,18 +13,18 @@
 
 <body>
     <header>
-        <h1>DANE <span class="fs-2"> Extremely Realistic Sport Bets</span></h1>
+        <h1 class="text-light">HAW: <span class="fs-2"> Extremely Realistic Sport Bets</span></h1>
         <!-- Add line below? -->
     </header>
     <main>
         <div class="container">
             <section class="row">
                 <div class="col-12">
-                    <div class="m-auto">
-                        <p class="fs-2"> Bank</p>
-                        <div class="rounded-pill p-3">
-                            <p class="text-end fs-4 mb-0">
-                                <span id="bank"></span>
+                    <div class="m-auto bank">
+                        <p class="fs-2 fw-bold text-white"> Bank</p>
+                        <div class="rounded-pill bg-success p-3">
+                            <p class="fs-4">
+                                <span id="bank" class="text-white fw-bold"></span>
                             </p>
                         </div>
                     </div>
@@ -33,29 +33,61 @@
             <section class="row">
                 <div class="col-6">
                     <div>
-                        <h2>Team 1</h2>
-                        <div class="rounded-pill p-3 bg-dark text-center">
-                            <p id="teamOneRoster"></p>
+                        <h2 class="text-light">Team 1</h2>
+                        <div class="rounded-pill bg-dark text-center team-roster">
+                            <p id="teamOne" class="fs-2"></p>
                         </div>
                         <div>
-                            <button onclick=""> Bet 5</button>
-                            <button onclick=""> Bet 25</button>
-                            <button onclick=""> Bet 100</button>
-                            <button onclick=""> Bet it all</button>
+                            <button onclick="teamBet(1, 5)"> Bet 5</button>
+                            <button onclick="teamBet(1, 25)"> Bet 25</button>
+                            <button onclick="teamBet(1, 100)"> Bet 100</button>
+                            <button onclick="teamBet(1, bank)"> Bet it all</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div>
-                        <h2>Team 2</h2>
-                        <div>
-                            <p id="team2"></p>
+                        <h2 class="text-light">Team 2</h2>
+                        <div class="rounded-pill bg-dark text-center team-roster">
+                            <p id="teamTwo" class="fs-2"></p>
                         </div>
                         <div>
-                            <button onclick=""> Bet 5</button>
-                            <button onclick=""> Bet 25</button>
-                            <button onclick=""> Bet 100</button>
-                            <button onclick=""> Bet it all</button>
+                            <button onclick="teamBet(2, 5)"> Bet 5</button>
+                            <button onclick="teamBet(2, 25)"> Bet 25</button>
+                            <button onclick="teamBet(2, 100)"> Bet 100</button>
+                            <button onclick="teamBet(2, bank)"> Bet it all</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="row">
+                <div class="col-12">
+                    <div class="text-left bank">
+                        <p class="fs-2 fw-bold text-white"> High Score</p>
+                        <div class="rounded-pill bg-success p-3">
+                            <p class="fs-4">
+                                <span id="highScore" class="text-white fw-bold"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="text-left bank">
+                        <p class="fs-2 fw-bold text-white"> Win/Loss</p>
+                        <div class="rounded-pill bg-primary p-3">
+                            <p class="fs-4">
+                                <span id="trackScore" class="text-white fw-bold"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="text-left bank">
+                        <p class="fs-2 fw-bold text-white"> Track Record</p>
+                        <div class="rounded-pill bg-primary p-3">
+                            <p class="fs-4">
+                                <span id="trackMoney" class="text-white fw-bold"></span>
+                            </p>
                         </div>
                     </div>
                 </div>
